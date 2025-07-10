@@ -1,5 +1,7 @@
 ### Generic Slice Methods
 
+Provided simple test cases but you're more than welcome to extend with table-driven tests.
+
 ```go
 package main
 
