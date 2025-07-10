@@ -1,3 +1,5 @@
+###Generic Slice Methods
+
 ```go
 package main
 
