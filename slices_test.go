@@ -35,11 +35,11 @@ func TestFilter(t *testing.T) {
 	s := []int{1, 2, 3, 4, 5}
 	expected := []int{2, 4}
 
-	got := Filter(s, func(n int) bool {
+	result := Filter(s, func(n int) bool {
 		return n%2 == 0
 	})
 
-	if len(got) != len(expected) {
-		t.Fatalf("got %v, want %v", got, expected)
+	if len(result) != len(expected) {
+		t.Errorf("Expected %d, got %d", expected, result)
 	}
 }
