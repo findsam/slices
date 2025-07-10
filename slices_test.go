@@ -4,6 +4,7 @@ import (
 	"reflect"
 	"testing"
 )
+
 func TestMap(t *testing.T) {
 	s := []int{1, 2, 3}
 	expected := []int{2, 4, 6}
@@ -14,5 +15,18 @@ func TestMap(t *testing.T) {
 
 	if !reflect.DeepEqual(result, expected) {
 		t.Errorf("Expected %v, got %v", expected, result)
+	}
+}
+
+func TestReduce(t *testing.T) {
+	s := []int{1, 2, 3, 4}
+	expected := 10
+
+	result := Reduce(s, 0, func(acc int, i int) int {
+		return acc + i
+	})
+
+	if result != expected {
+		t.Errorf("Expected %d, got %d", expected, result)
 	}
 }
